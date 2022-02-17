@@ -60,10 +60,8 @@
 
 
 ">
-    <a class="nav-link" href="latest-forecast">
-      <i class="fas fa-fw fa-binoculars"></i>
-      <span>Forecast</span>
-    </a>
+    <a class="nav-link" href="latest-forecast.html"><i
+        class="fas fa-fw fa-binoculars"></i><span>Forecast</span></a>
   </li>
   
   
@@ -73,10 +71,8 @@
 
 
 ">
-    <a class="nav-link" href="forecast-models">
-      <i class="fas fa-fw fa-list"></i>
-      <span>All Models</span>
-    </a>
+    <a class="nav-link" href="forecast-models.html"><i
+        class="fas fa-fw fa-list"></i><span>All Models</span></a>
   </li>
   
 
@@ -93,9 +89,8 @@
 
 
 ">
-    <a class="nav-link" href="historical-load-data">
-      <i class="fas fa-fw fa-bolt"></i>
-      <span>Load Data</span></a>
+    <a class="nav-link" href="historical-load-data.html"><i
+        class="fas fa-fw fa-bolt"></i><span>Load Data</span></a>
   </li>
   
 
@@ -115,8 +110,10 @@ active
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <!-- <h6 class="collapse-header">Custom Components:</h6> -->
-        <a class="collapse-item" href="historical-weather-data">Historical</a>
-        <a class="collapse-item" href="forecast-weather-data">Forecast</a>
+        <a class="collapse-item"
+          href="historical-weather-data.html">Historical</a>
+        <a class="collapse-item"
+          href="forecast-weather-data.html">Forecast</a>
       </div>
     </div>
   </li>
@@ -133,7 +130,7 @@ active
 
 
 ">
-    <a class="nav-link" href="model-settings">
+    <a class="nav-link" href="model-settings.html">
       <i class="fas fa-fw fa-cogs"></i>
       <span>Model Settings</span></a>
   </li>
@@ -146,7 +143,7 @@ active
 
 
 ">
-    <a class="nav-link" href="instructions">
+    <a class="nav-link" href="instructions.html">
       <i class="fas fa-fw fa-book"></i>
       <span>Instructions</span></a>
   </li>
@@ -265,15 +262,22 @@ active
 
 
 
-
-
-
-<div class="card shadow mb-4" id="upload">
-  <div class="card-body text-center ">
-    No data currently uploaded. Data will display here after uploading a CSV.
+<div class="card shadow mb-4" id="chart">
+  <!-- Card Header - Accordion -->
+  <a href="#collapse-chart" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true"
+    aria-controls="collapse-chart">
+    <h6 class="m-0 font-weight-bold text-primary">Charts</h6>
+  </a>
+  <!-- Card Content - Collapse -->
+  <div class="collapse show" id="collapse-chart">
+    <div class="card-body">
+      <div id="chart-container" style="height: 400px; min-width: 310px"></div>
+      <script type="text/javascript">
+        create_timeseries_chart(id = 'chart-container', data = [{"data": [[1546300800000, 4.124172694385234], [1546304400000, 4.3412422776368125], [1546308000000, 3.23765872912431], [1546311600000, 4.84284013517382], [1546315200000, 2.8617770506164755], [1546318800000, 6.032119197135247], [1546322400000, 5.088355268896954], [1546326000000, 5.8534907916631225], [1546329600000, 3.5899560658778293], [1546333200000, 3.311269950514014], [1546336800000, 5.595837110255957], [1546340400000, -1.8258401364720416], [1546344000000, 0.183690069164444], [1546347600000, 0.2291304523933493], [1546351200000, 5.258593859842503], [1546354800000, 3.062565769558921], [1546358400000, 1.149312113789862], [1546362000000, 6.524910495108818], [1546365600000, 2.906820210505669], [1546369200000, 3.1623370546651333], [1546372800000, 2.051292497892394], [1546376400000, 2.3597794447978964], [1546380000000, 3.5147050330864165], [1546383600000, 6.232769253266892]], "name": "tempc"}], title = 'Forecast Weather Data')
+      </script>
+    </div>
   </div>
 </div>
-
 
 
 
@@ -554,7 +558,7 @@ active
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="/logout">Logout</a>
+          <a class="btn btn-primary" href="logout">Logout</a>
         </div>
       </div>
     </div>
